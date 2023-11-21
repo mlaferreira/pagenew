@@ -1,5 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    height: 120px;
+}
+.container{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;  
+}
+
+.header .logo h1 a{
+    display: block;
+    font-size: 40px;    
+}
+.header .logo h1 a img{
+    width: 100%;
+    max-width: 100%;
+}
+nav ul{
+    display: flex;
+    column-gap: 32px;
+}
+nav ul li{
+    display: inline-flex;
+}
+nav ul li a{
+    color: var(--Dark-grayish-blue);
+    text-transform: capitalize;
+    font-weight: 400;
+    transition: all .3s;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    color: var(--Soft-orange);
+}
+
+nav ul li a.active{
+    color: var(--Soft-orange);
+}
+.menu-mobi{
+    width: 32px;
+    height: 32px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+     
+  
+}
+.menu-mobi .bar{
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--Very-dark-blue);
+}
+.hero{
+    width: 100%;    
+}
+.hero .container{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+}
+.hero article{
+    width: 980px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+    padding-bottom: 30px;
+    
+}
+article .hero-img{
+    width: inherit;
+    height: 190px;
+    margin-bottom: 200px;
+}
+article .hero-img img{
+    width: 100%;
+    max-width: 100%;
+}
+.hero-text{    
+    width: 100%;    
+    height: calc(600px - 190px);
+    display: flex;  
+    justify-content: space-between;
+    padding-top: 30px;
+     
+}
+.hero-text-h2{
+    width: 40%;
+    height: 100%;
+    display: flex;    
+    align-items: center;    
+}
+.hero-text-h2 h2{
+    font-size: 50px;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+.hero-text-p{
+    width: 50%;
+    padding: 0 20px;
+       
+}
+.hero-text-p p{
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+.hero-text-p .btn{
+    display: inline-block;
+    background-color: var(--Soft-red);
+    color: var(--Off-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 30px;
+    letter-spacing: 3px;
+}
+
+.hero aside{
+    width: 400px;
+    height: 600px;
+    background-color: var(--Very-dark-blue);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hero aside h3{
+    margin: 0;
+    padding: 0;
+    color: var(--Soft-orange);
+    text-transform: capitalize;
+    font-size: 40px;
+    
+}
+.aside-text{   
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--Off-white);
+}
+.aside-text:nth-child(4){
+    border-bottom: transparent;
+}
+.aside-text h4{
+    color: var(--Off-white);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 22px;
+
+}
+.aside-text p{
+    color: var(--Off-white);
+    font-size: 15px;
+}
+.listas{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 50px;  
+    margin-top: 50px;
+    
+}
+.listas .container{
+    display: grid;    
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    justify-content: space-between;
+   grid-gap: 110px;
+}
+
+.lista{
+    width: 400px;  
+    display: flex;    
+    
+}
+.lista-img{ 
+    padding-right: 20px;
+}
+.lista-img img{
+    width: 100%;   
+    max-width: 100%;
+}
+.lista-text span{
+    color: var(--Grayish-blue);
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.lista-text h2{
+    color: var(--Very-dark-blue);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.lista-text p{
+    font-size: 15px;
+    color: var(--Dark-grayish-blue);
 }
